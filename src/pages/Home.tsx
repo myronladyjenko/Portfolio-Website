@@ -2,9 +2,9 @@ import React from 'react';
 
 const Home: React.FC = () => {
   return (
-    <div className="relative min-h-screen bg-[url('/world-map-background.jpg')] bg-cover bg-center bg-no-repeat bg-fixed overflow-x-hidden">
+    <div className="relative min-h-screen max-h-screen bg-[url('/world-map-background.jpg')] bg-cover bg-center bg-no-repeat bg-fixed">
 
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm z-10" />
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm z-10" />
 
 
       <div className="relative z-20 flex items-center justify-center h-screen px-6">
@@ -14,10 +14,10 @@ const Home: React.FC = () => {
             <div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                 Myron Ladyjenko <br />
-                <span className="text-orange-400">Full Stack Developer</span>
+                <span className="text-yellow-500">Full Stack Developer</span>
               </h1>
             </div>
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+            <p className="text-gray-200 font-semibold text-base md:text-lg leading-relaxed">
               Proficient software engineer with 2+ years of experience across all stages of the development lifecycle. <br /><br />
               {/* Demonstrated technical and collaborative skills through 5+ coding competitions, 4 hackathons, and 10+ self-driven projects. <br /><br /> */}
               Adaptable and self-driven with a proven ability to quickly master new technologies and build scalable systems.
@@ -26,18 +26,18 @@ const Home: React.FC = () => {
               <a
                 href="/Myron_Ladyjenko_Resume.pdf"
                 download
-                className="inline-block bg-orange-400 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:bg-orange-500 transition"
+                className="inline-block bg-yellow-500 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:bg-yellow-600 transition"
               >
                 Download Resume
               </a>
             </div>
           </div>
 
-          <div className="md:w-1/3 h-full p-4 flex justify-center items-center bg-white/10">
+          <div className="md:w-1/3 h-full p-4 flex justify-center items-center">
             <img
               src="/dubai.jpg"
               alt="Myron Ladyjenko"
-              className="rounded-l-none rounded-r-2xl object-cover w-full"
+              className="rounded-md object-cover w-full"
             />
           </div>
         </div>
