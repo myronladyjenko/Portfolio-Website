@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full fixed top-0 h-16 text-primary z-50 bg-white border-b-2">
+    <div className="w-full fixed top-0 h-16 z-50 bg-white border-b-2 border-primary">
       <div className="flex w-full h-full items-center justify-center">
         <div className="md:w-[80%] w-[95%] h-full flex align-middle items-center">
           <h1 
@@ -32,14 +32,14 @@ const Navbar: React.FC = () => {
                 >
                   Reports
                 </NavLink>
-                <NavLink 
+                {/* <NavLink 
                   to="/reports/JoelAndDanielAreCooking"
                   style={({ isActive }) => ({
                     borderBottom: isActive ? '1px solid rgb(52, 58, 64)' : 'none',
                   })}
                 >
                   TestReportPath
-                </NavLink>
+                </NavLink> */}
                 {/* <NavLink 
                   to="/reports"
                   style={({ isActive }) => ({

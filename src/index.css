@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #FFF789;
+  
+  /* ... */
+}
+
+body {
+  @apply overflow-x-hidden overflow-y-hidden;
+}

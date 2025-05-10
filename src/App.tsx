@@ -1,6 +1,6 @@
 // import React from 'react';
 // import Footer from './components/Footer.jsx';
-import Navbar from './components/Navbar.jsx';
+// import Navbar from './components/Navbar.jsx';
 import Home from './pages/Home.js';
 import About from './pages/About.js';
 import Reports from './pages/Reports.js';
@@ -16,9 +16,9 @@ import ReportPage from './pages/ReportPage.js';
 const App = () => {
   return (
     <div className="App">
-      <div className='flex flex-col min-h-[100vh]'>
-        <Navbar/>
-        <div className='mt-20'>
+      <div className='NavbarPlusRoutes'>
+        {/* <Navbar/> */}
+        <div>
             <Routes>
             <Route path="/">
                 <Route index element={<Home />} />
