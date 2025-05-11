@@ -23,6 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Configure Git identity
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
       - name: Run deploy script
         run: npm run deploy
         env:
