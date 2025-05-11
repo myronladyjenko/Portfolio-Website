@@ -24,7 +24,7 @@ const Home: React.FC = () => {
             </p>
             <div>
               <a
-                href="/Myron_Ladyjenko_Resume.pdf"
+                href="/resume.pdf"
                 download
                 className="inline-block bg-yellow-500 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:bg-yellow-600 transition"
               >
