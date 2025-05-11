@@ -9,7 +9,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "deploy:ci": "gh-pages -d dist -u \"github-actions-bot <actions@github.com>\" -r https://x-access-token:${GITHUB_TOKEN}@github.com/myronladyjenko/Portfolio-Website.git"
   },
   "devDependencies": {
     "@types/react-dom": "^19.1.3",

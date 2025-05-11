@@ -29,7 +29,7 @@ jobs:
           git config --global user.name "GitHub Actions"
 
       - name: Run deploy script
-        run: npm run deploy
+        run: npm run deploy:ci
         env:
           CI: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
