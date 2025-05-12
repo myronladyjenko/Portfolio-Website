@@ -2,46 +2,14 @@ import React from 'react';
 
 const Home: React.FC = () => {
   return (
-    <div className="relative min-h-screen max-h-screen bg-[url('/world-map-background.jpg')] bg-cover bg-center bg-no-repeat bg-fixed">
-
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm z-10" />
-
-
-      <div className="relative z-20 flex items-center justify-center h-screen px-6">
-
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl shadow-2xl shadow-black/40 max-w-5xl w-full flex flex-col md:flex-row overflow-hidden border border-white/10">
-          <div className="p-10 md:w-2/3 text-white space-y-6">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                Myron Ladyjenko <br />
-                <span className="text-yellow-500">Full Stack Developer</span>
-              </h1>
-            </div>
-            <p className="text-gray-200 font-semibold text-base md:text-lg leading-relaxed">
-              Proficient software engineer with 2+ years of experience across all stages of the development lifecycle. <br /><br />
-              {/* Demonstrated technical and collaborative skills through 5+ coding competitions, 4 hackathons, and 10+ self-driven projects. <br /><br /> */}
-              Adaptable and self-driven with a proven ability to quickly master new technologies and build scalable systems.
-            </p>
-            <div>
-              <a
-                href="/resume.pdf"
-                download
-                className="inline-block bg-yellow-500 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:bg-yellow-600 transition"
-              >
-                Download Resume
-              </a>
-            </div>
-          </div>
-
-          <div className="md:w-1/3 h-full p-4 flex justify-center items-center">
-            <img
-              src="/dubai.jpg"
-              alt="Myron Ladyjenko"
-              className="rounded-md object-cover w-full"
-            />
-          </div>
-        </div>
-
+    <div className="min-h-screen pt-20 px-4 sm:px-6 md:px-8 flex items-center justify-center">
+      <div className="max-w-3xl mx-auto text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
+          Interactive Globe Coming Soon
+        </h1>
+        <p className="text-xl sm:text-2xl text-gray-200 mb-8">
+          Get ready to explore my journey through an interactive 3D globe experience
+        </p>
       </div>
     </div>
   );

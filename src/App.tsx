@@ -1,42 +1,61 @@
-// import React from 'react';
-// import Footer from './components/Footer.jsx';
-// import Navbar from './components/Navbar.jsx';
-import Home from './pages/Home.js';
-import About from './pages/About.js';
-import Reports from './pages/Reports.js';
-import { Route, Routes } from 'react-router-dom';
-// import Stories from './pages/Stories.jsx'
-// import StoryPage from './pages/StoryPage.jsx';
-// import Reports from './pages/Reports.jsx';
-// import ReportPage from './pages/ReportPage.jsx';
-// import { Route, Routes } from 'react-router-dom';
-import ReportPage from './pages/ReportPage.js';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Reports from './pages/Reports';
+import ReportPage from './pages/ReportPage';
+import Navbar from './components/Navbar';
+import LandingCard from './components/LandingCard';
+import Background from './components/Background';
 
+const App: React.FC = () => {
+  const [showLanding, setShowLanding] = useState(true);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-const App = () => {
+  // Reset to root path when landing card is shown
+  useEffect(() => {
+    if (showLanding && location.pathname !== '/') {
+      navigate('/', { replace: true });
+    }
+  }, [showLanding, location.pathname, navigate]);
+
+  const handleCloseLanding = () => {
+    setShowLanding(false);
+    navigate('/home');
+  };
+
+  const handleNameClick = () => {
+    setShowLanding(true);
+    navigate('/');
+  };
+
+  // Determine if background should be blurred based on current route
+  // const shouldBlur = location.pathname !== '/home';
+  const shouldBlur = true;
+
   return (
-    <div className="App">
-      <div className='NavbarPlusRoutes'>
-        {/* <Navbar/> */}
-        <div>
+    <div className="relative min-h-screen">
+      <Background isBlurred={shouldBlur} />
+      
+      {showLanding ? (
+        <LandingCard onClose={handleCloseLanding} />
+      ) : (
+        <>
+          <Navbar onNameClick={handleNameClick} />
+          <main>
             <Routes>
-            <Route path="/">
-                <Route index element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="reports" element={<Reports />} />
-                <Route path="reports/:reportName" element={<ReportPage />} />
-                
-                {/* <Route path="stories" element={<Stories />} />
-                <Route path="stories/:storyId" element={<StoryPage />} />
-                <Route path="reports" element={<Reports />} />
-                <Route path="reports/:reportNum" element={<ReportPage />} /> */}
-            </Route>
+              <Route path="/" element={<LandingCard onClose={handleCloseLanding} />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/reports" element={<Reports />} />
+              <Route path="/reports/:reportName" element={<ReportPage />} />
             </Routes>
-        </div>
-        {/* <Footer/> */}
-      </div>
+          </main>
+        </>
+      )}
     </div>
   );
-}
+};
 
 export default App;
