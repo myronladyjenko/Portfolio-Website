@@ -31,8 +31,7 @@ const App: React.FC = () => {
   };
 
   // Determine if background should be blurred based on current route
-  // const shouldBlur = location.pathname !== '/home';
-  const shouldBlur = true;
+  const shouldBlur = !location.pathname.startsWith('/reports');
 
   return (
     <div className="relative min-h-screen">
