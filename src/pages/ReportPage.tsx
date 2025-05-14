@@ -78,11 +78,11 @@ const ReportPage: React.FC = () => {
                   {section.images && section.images.length > 0 && (
                     <div className="mt-6 space-y-4">
                       {section.images.map((image, imgIndex) => (
-                        <figure key={imgIndex} className="my-6">
+                        <figure key={imgIndex} className="my-6 flex flex-col items-center">
                           <img
                             src={image.src}
                             alt={image.alt}
-                            className="rounded-lg w-full h-auto"
+                            className="rounded-lg w-1/2 h-auto"
                           />
                           {image.caption && (
                             <figcaption className="text-center text-gray-400 mt-2">

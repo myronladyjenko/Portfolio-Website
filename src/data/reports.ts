@@ -55,7 +55,13 @@ To accomplish my tasks, I had to do a lot of reading and learning to acquire ski
       },
       {
         title: 'SAP Culture...',
-        content: `As a part of SAP, I participated in multiple events: weekly intern meetings, learning sessions, board game breaks, and company-wide events. The two most memorable events were Pi Day and the SAP d-com conference. SAP's d-com conference was fantastic: multiple tech talks that would fascinate anyone and a fun time spent with the team during food breaks.`
+        content: `As a part of SAP, I participated in multiple events: weekly intern meetings, learning sessions, board game breaks, and company-wide events. The two most memorable events were Pi Day and the SAP d-com conference. SAP's d-com conference was fantastic: multiple tech talks that would fascinate anyone and a fun time spent with the team during food breaks.`,
+        images: [
+          {
+            src: '/sap_dcom.png',
+            alt: 'SAP d-com conference'
+          }
+        ]
       },
       {
         title: 'To conclude...',
