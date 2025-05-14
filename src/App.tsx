@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,13 +12,6 @@ const App: React.FC = () => {
   const [showLanding, setShowLanding] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-
-  // Reset to root path when landing card is shown
-  // useEffect(() => {
-  //   if (showLanding && location.pathname !== '/') {
-  //     navigate('/', { replace: true });
-  //   }
-  // }, [showLanding, location.pathname, navigate]);
 
   const handleCloseLanding = () => {
     setShowLanding(false);
