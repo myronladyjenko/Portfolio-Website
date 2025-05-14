@@ -9,16 +9,16 @@ import LandingCard from './components/LandingCard';
 import Background from './components/Background';
 
 const App: React.FC = () => {
-  const [showLanding, setShowLanding] = useState(true);
+  const [showLanding, setShowLanding] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   // Reset to root path when landing card is shown
-  useEffect(() => {
-    if (showLanding && location.pathname !== '/') {
-      navigate('/', { replace: true });
-    }
-  }, [showLanding, location.pathname, navigate]);
+  // useEffect(() => {
+  //   if (showLanding && location.pathname !== '/') {
+  //     navigate('/', { replace: true });
+  //   }
+  // }, [showLanding, location.pathname, navigate]);
 
   const handleCloseLanding = () => {
     setShowLanding(false);
@@ -44,7 +44,7 @@ const App: React.FC = () => {
           <Navbar onNameClick={handleNameClick} />
           <main>
             <Routes>
-              <Route path="/" element={<LandingCard onClose={handleCloseLanding} />} />
+              <Route index element={<LandingCard onClose={handleCloseLanding} />} />
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/reports" element={<Reports />} />
