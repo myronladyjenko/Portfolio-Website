@@ -72,7 +72,6 @@ const Navbar: React.FC<NavbarProps> = ({ onNameClick }) => {
             </motion.button>
           </div>
           
-          {/* Mobile menu button */}
           <div className="flex items-center space-x-4 sm:space-x-8">
             <Link
               to="/home"
