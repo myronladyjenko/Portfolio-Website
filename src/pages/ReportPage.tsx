@@ -35,7 +35,7 @@ const ReportPage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden border border-white/20 shadow-xl shadow-black/20"
+          className="bg-white/1 backdrop-blur-lg rounded-xl overflow-hidden border border-white/20 shadow-xl shadow-black/20"
         >
           <div className="p-8 sm:p-10">
             <div className="flex items-center justify-between mb-6">
