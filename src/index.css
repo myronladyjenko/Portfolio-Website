@@ -1,56 +1,60 @@
 @import "tailwindcss";
 
-@theme {
-  --color-primary: #FFF789;
-  
-  /* ... */
+:root {
+  --bg-from: #0B0F0B;
+  --bg-via:  #0F1410;
+  --bg-to:   #0B0F0B;
+
+  --surface: #141615;
+  --surface-border-green: rgba(34,197,94,0.22);
+  --surface-ring-orange: rgba(245,158,11,0.45);
+
+  --text-primary: #E8F0E9;
+  --text-secondary: #C9D4CB;
+
+  --primary: #22C55E;
+  --primary-hover: #16A34A;
+  --primary-focus-ring: rgba(34,197,94,0.45);
+
+  --accent-border: #BFEFCB;
+  --accent-bg: #EAF8EF;
+  --accent-text: #0F2014;
+
+  --orange: #F59E0B;
+  --orange-hover: #D97706;
+
+  background-color: var(--bg-from);
 }
 
-/* Base responsive styles */
-html {
-  @apply antialiased;
+html { 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+  /* overscroll-behavior: none; */
+  background-color: var(--bg-from);
 }
 
 body {
-  @apply min-h-screen overflow-x-hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, var(--bg-from), var(--bg-via), var(--bg-to));
+  color: var(--text-primary);
+}
+body::-webkit-scrollbar {
+  display: none;            
 }
 
-.container {
-  @apply w-[95%] md:w-[90%] lg:w-[80%] mx-auto;
-}
+.container { width: 95%; margin-left: auto; margin-right: auto; }
 
-h1 {
-  @apply text-3xl sm:text-4xl md:text-5xl;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+p { font-size: 1rem; }
 
-h2 {
-  @apply text-2xl sm:text-3xl md:text-4xl;
-}
+.section-padding { padding-top: 2rem; padding-bottom: 2rem; }
+.content-padding { padding-left: 1rem; padding-right: 1rem; }
 
-h3 {
-  @apply text-xl sm:text-2xl md:text-3xl;
-}
+img { max-width: 100%; height: auto; }
 
-p {
-  @apply text-sm sm:text-base md:text-lg;
-}
+button, .button { padding: 0.5rem 1rem; }
 
-.section-padding {
-  @apply py-8 sm:py-12 md:py-16;
-}
-
-.content-padding {
-  @apply px-4 sm:px-6 md:px-8;
-}
-
-img {
-  @apply max-w-full h-auto;
-}
-
-button, .button {
-  @apply px-4 sm:px-6 py-2 sm:py-3;
-}
-
-button.text-white { 
-      padding: 0  
-}
+button.text-white { padding: 0; }

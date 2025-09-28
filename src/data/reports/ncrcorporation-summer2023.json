@@ -1,0 +1,47 @@
+{
+    "id": "ncrcorporation-summer2023",
+    "company": "NCR Corporation",
+    "position": "Backend Java Developer",
+    "workType": "co-op",
+    "location": "hybrid",
+    "term": "Summer 2023",
+    "date": "May 2023 - August 2023",
+    "thumbnail": "/NCR_Corporation_logo.png",
+    "technologies": ["Java", "Spring", "Jenkins", "MySQL", "NodeJS", "JavaScript", "Cassandra"],
+    "sections": [
+    {
+        "title": "Introduction...",
+        "content": "Hi, my name is Myron Ladyjenko. I am a third-year Software Engineering student at the University of Guelph with a passion for software to solve challenging problems. I love working in teams, solving challenging problems, and learning new technologies. I am always happy to expand my knowledge.\n\n        A little about me... why software engineering?\n\n        In 2019, I was a member of the International Tournament of Young Mathematicians in Barcelona, Spain. Each team in the competition had to solve ten investigational problems and present them to the jury. This competition helped me gain experience working as a team leader in a team. At first, we struggled, but when we were at our last chance to make it to the finals, we all felt immense pressure. Our team then agreed to present my solution. I was nervous but knew it was essential to remain calm and focused. We rose to the challenge and won the silver medal.\n\n        I demonstrated leadership when it was most needed and helped my team succeed. Afterwards, I understood that math was not only about solving thousands of typical problems for competition. Still, it was also about searching for unknown answers, brainstorming solutions for unsolved problems, and bringing ideas to life. That was when I decided to become a software developer. I love to apply my mathematical and team skills to developing valuable software."
+    },
+    {
+        "title": "Where did I work...",
+        "content": "For my first co-op, I am working at the NCR Corporation. NCR is the world's leading enterprise provider of software, hardware and services for banks. I work in the NCR Digital Banking section of the company. NCR Digital Banking provides technology solutions to enhance online and mobile banking experiences for financial institutions, offering services such as online account management, mobile banking apps, bill payment, and security features.\n\n        I am a Java Backend developer working in the Pre-Staged('Wintermute') team. I am working on the Channel Services Platform (CSP) Teller products. For my first 4 months, I have been working on the software that communicates with hardware bank machines. This software allows tellers to perform automated cash transactions and securely store incoming cash. For this project two teams have been involved: 'Wintermute' based in Waterloo and 'Orchid' based in India."
+    },
+    {
+        "title": "What was I able to accomplish...",
+        "content": "At work, I was able to continuously improve my technical and communication skills. When I first joined NCR I set myself goals so that in the end I could reflect on them and see my direction of growth. I tasked myself with improving communication, leadership, teamwork, critical thinking and technical skills. During my work time, I was able to successfully improve in all of the areas. I was able to improve on my knowledge of Agile methodology and participate in it. I was able to actively participate in the meetings and present my ideas to the architects and senior developers. I have taken challenging tasks and was able to accomplish them on time. I have been able to improve my critical thinking skills while working on the designs and implementation of different project features. I have been able to quickly analyze and solve problems whenever it was needed. \n\n    I wanted to work as a back-end developer because it is an in-demand position, and it exercises problem-solving skills. Also, this way I am able to contribute to the core functionality of the projects and understand their overall architecture. This position also promotes versatility in my career since I am able to understand and work on multiple technologies. I wanted to get development work in Java and Spring Boot as well as work with technologies such as Docker, Kubernetes, Kafka and REST API. All of these technologies are used in enterprise development and the experience of working with them will help me in my future jobs. "
+    },
+    {
+        "title": "What did I work on...",
+        "content": "As previously mentioned, I worked on creating software that allows tellers to perform automated cash transactions. During my time at NCR and with my team, I gained valuable experience working in a team environment. As part of the team, I participated in daily scrum meetings, grooming calls, and design meetings. The project consists of multiple components, utilizing microservice architecture. During the summer term, I was able to contribute more than full-time developers on my team. I constantly challenged myself to take on the most difficult tasks and deliver them on time and with high quality. One of the most exciting aspects of my job is working with people across different continents—North America, Asia, and Europe. It has been an amazing experience that has helped me develop cross-cultural communication skills and gain experience in various areas of the project.\n\nAs a developer, I was responsible for creating multiple APIs that enabled communication between front-end and back-end services. By exposing certain endpoints to the front-end application, tellers can perform multiple cash transactions through hardware machines. I worked on developing transaction flows such as 'Deposit"
+    },
+    {
+        "title": "NCR Culture...",
+        "content": "As a part of NCR, I was able to participate in multiple work events. Our team went for lunch every month. At the NCR office, I was able to play table tennis and foosball. Starting from June till July NCR hosted a table tennis tournament, which was an awesome event where I got to meet multiple. I was able to win the tournament in a hard last match, winning 3:2 in a 5-set thriller. NCR has a wonderful community of people who are willing to help each other and enjoy each others' company.",
+        "images": [
+        {
+            "src": "/WintermuteTeamlunch.jpg",
+            "alt": "Team Lunch"
+        }
+        ]
+    },
+    {
+        "title": "To conclude...",
+        "content": "Working at NCR has been a tremendous experience. I have been able to work on a project that is now released to the customers. It is truly something special to be a part of that. This experience taught me essential skills of working in a team. I have been exposed to multiple technologies and gained an understanding of development, integration, and successful software delivery processes and was able to successfully contribute to these processes."
+    },
+    {
+        "title": "Acknowledgments...",
+        "content": "I would like to acknowledge all of my team 'Wintermute' members, specifically Yuktika Pahwa (Technical Team Lead), Halwasia Nikhil (Team Manager) and Arun Saini (Scrum Master). They have provided a professional, fun and learning atmosphere in the team. They always pushed me and provided opportunities to improve in terms of technical and social skills. I truly appreciate your effort in helping me become a better developer. It has been a great experience to work alongside awesome developers such as Surani Azim, Singh Gurjap and Noah Hinderle."
+    }
+    ]
+}

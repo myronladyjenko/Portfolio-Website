@@ -1,12 +1,11 @@
 import React from 'react';
-import { Routes, Route, useNavigate, useLocation, Outlet } from 'react-router-dom';
+import { Routes, Route, useNavigate, Outlet } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Reports from './pages/Reports';
 import ReportPage from './pages/ReportPage';
 import Navbar from './components/Navbar';
 import LandingCard from './components/LandingCard';
-import Background from './components/Background';
 
 function WithNavbar() {
   const navigate = useNavigate();
@@ -14,7 +13,7 @@ function WithNavbar() {
     <>
       <Navbar onNameClick={() => navigate('/')} />
       <main>
-        {/* Children will be rendered here */}
+        {}
         <Outlet />
       </main>
     </>
@@ -23,15 +22,9 @@ function WithNavbar() {
 
 const App: React.FC = () => {
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const shouldBlur = !location.pathname.startsWith('/reports');
-  const atRoot = location.pathname === '/';
 
   return (
     <div className="relative min-h-screen">
-      {!atRoot && <Background isBlurred={shouldBlur} />}
-
       <Routes>
         <Route
           path="/"

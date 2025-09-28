@@ -1,0 +1,14 @@
+{
+    "id": "blackberryqnx-summer2022",
+    "company": "BlackBerry QNX",
+    "position": "Software Developer Intern",
+    "workType": "internship",
+    "location": "hybrid",
+    "term": "Summer 2022",
+    "date": "May 2022 - August 2022",
+    "thumbnail": "/BlackBerryQNX.png",
+    "technologies": ["C", "Bash", "Unit / Regression / Integration Tests"],
+    "sections": [
+
+    ]
+}

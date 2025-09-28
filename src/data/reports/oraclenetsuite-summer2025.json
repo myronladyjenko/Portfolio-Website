@@ -1,0 +1,47 @@
+{
+    "id": "oraclenetsuite-summer2025",
+    "company": "Oracle NetSuite",
+    "position": "Software Engineering Intern",
+    "workType": "co-op",
+    "location": "hybrid",
+    "term": "Summer 2025",
+    "date": "May 2025 - August 2025",
+    "thumbnail": "/Oracle_NetSuite_Logo.jpg",
+    "technologies": ["Java 21 SE", "Oracle DB", "Design Patterns", "Guice"],
+    "sections": [
+    {
+        "title": "Introduction...",
+        "content": "I am going into my final year as a Computer Science student at the University of Guelph. I am passionate about using software to solve challenging problems. I love working in teams, learning new technologies, and challenging myself.\n\n        A little about me... why software engineering?\n\n        In 2019, I was a member of the International Tournament of Young Mathematicians in Barcelona, Spain. Each team in the competition had to solve ten investigational problems and present them to the jury. This competition helped me gain experience working as a team leader in a team. At first, we struggled, but when we were at our last chance to make it to the finals, we all felt immense pressure. Our team then agreed to present my solution. I was nervous but knew it was essential to remain calm and focused. We rose to the challenge and won the silver medal.\n\n        I demonstrated leadership when it was most needed and helped my team succeed. Afterwards, I understood that math was not only about solving thousands of typical problems for competition. Still, it was also about searching for unknown answers, brainstorming solutions for unsolved problems, and bringing ideas to life. That was when I decided to become a software developer. I love to apply my mathematical and team skills to developing valuable software."
+    },
+    {
+        "title": "Where did I work...",
+        "content": "I worked at Oracle NetSuite for four months in 2025, from May to August. During my co-op term, I was on the feature development team. I worked on the core product by adding new functionality to the high-priority features. \n\nOracle NetSuite is a leading provider of cloud-based enterprise resource planning (ERP) software, with over 42,000 customers in more than 200 countries and territories. NetSuite helps organizations manage core operations such as finance, customer relationship management (CRM), e-commerce, and supply chain management from a single platform. By integrating AI into its services, NetSuite provides real-time insights that empower managers to make smarter business decisions."
+    },
+    {
+        "title": "What was I able to accomplish...",
+        "content": "For this work term, I have set out the following goals: \nProblem Solving - Being able to solve problems in a new environment/system. When given a problem to solve in an unknown system, can analyze, identify and fully understand the problem. \nDepth & Breadth of Understanding - Expand knowledge in the specific programming areas: Java (pick up new challenging stories, learn new design patterns/concepts and apply them; complete the Java 21 Professional certification course), Oracle DB and PL/SQL. \nTeamwork - Be able to work with team members and solve problems. Participate in team activities and engage in discussions. Collaborate and seek help when necessary. \nIntegrative Communication - Improve in verbal and written communication to effectively interact with the team. Be able to contribute to team meetings and express my ideas.\n\nProblem-solving skills are crucial in software development as they allow one to quickly learn new technologies and adapt to changes in requirements and other issues that arise in daily work. Obtaining the Java 21 SE Professional certificate will allow me to gain more in-depth knowledge of Java and use its features to the best ability. As I want to become an architect, it is important for me to understand why one technology is better than the other and what the advantages and disadvantages of it are. The trade-offs are often the reason why one is preferred over the other. Seeing what has been done over the years and where the software development best practices are, I can form my own opinions and suggest ideas on how to implement certain features and architecture.\n\nI have worked on stories that required development in Java and PL/SQL. My everyday work involved working on the NetSuite product. I learned a lot from those tasks. I participated in the team discussions for the future work and planning, as well as the pointing sessions for the stories. I enjoyed working in the Scrum team as it involves a lot of communication. The most difficult part was getting familiar with certain parts of the codebase. It took a significant amount of time to learn certain approaches and how different parts of the system are connected. I was able to contribute to the team and deliver my stories. I obtained the certification through Oracle University, which will help my future career."
+    },
+    {
+        "title": "What did I work on...",
+        "content": "During my work term, I worked on the tasks that were a priority for my team and needed to be resolved in a short period of time. The focus was on a new feature that was being added to the NetSuite platform. In short, it included a new way of doing pricing for the customer items. The customers will be able to easily manipulate prices based on price rules (which involve multiple criteria) that can be applied to any items in the system. The pricing is flexible and able to support the custom needs of the users.\n\nOne of the highlights of my job was trying to update existing logic for asynchronous thread price updates. This involved changes to the legacy codebase, which required time to understand and read through. I spent multiple meetings talking to the senior members to understand the implications of the changes and different approaches. I was able to construct a PL/SQL procedure to update the price based on a new field, which scales up to millions of items and integrate it into the existing code. \n\nI have created certain fields on the UI with the backend support and the DB updates. For that, I had to work with the Product Manager and Tech Writer to get proper wording and approvals for the customer-facing text. I presented all of the changes at the end of the spring for the team demo. I have also worked on an infrastructure task that involved creating an automated task for the failed builds to be sent to our team channel so that they can be quickly triaged.\n\nTo accomplish my tasks, I had to do a lot of reading, digging through code and learning a few new technologies. Specifically, I read a lot of internal documentation to understand the architecture solution and asked questions to get clarity. \n"
+    },
+    {
+        "title": "Oracle NetSuite Culture...",
+        "content": "As a part of Oracle NetSuite, I participated in multiple events: intern lunches, learning sessions, board game breaks with the team, and office-wide events. My favourite ones were playing board games with the team and going together for lunch. I also enjoyed going to a Blue Jays game as an office-wide event!\n",
+        "images": [
+        {
+            "src": "/oracleoage.jpg",
+            "alt": "Oracle NetSuite Office"
+        }
+        ]
+    },
+    {
+        "title": "To conclude...",
+        "content": "Working at Oracle NetSuite has been a wonderful experience. It has been a great learning experience working with such a long-standing product as NetSuite. Thousands of developers, a huge codebase and years of knowledge hidden inside the code and documentation posed multiple challenges when I tried adding new features to the system. I have learned a lot about the good and bad practices for development and deepened my knowledge in understanding certain architecture principles and why certain technologies are used nowadays compared to their older alternatives. All of it will be a great help in my future work. I was able to work on priority tasks and make contributions to production environments. I enjoyed a lot working in the team: everyone is knowledgeable, ready to help and fun to work with."
+    },
+    {
+        "title": "Acknowledgments...",
+        "content": "I would like to acknowledge all of my team members. Everyone has been helpful and provided me with a professional, fun, and learning atmosphere in the team. I would like to say a big thank you to Roushd Ahmed, Sheldon Graham and Petr Klima and Iverson Hu. They have given me opportunities to grow, pushed me to new challenges and were always there when I needed support or just a person to talk to. "
+    }
+    ]
+}

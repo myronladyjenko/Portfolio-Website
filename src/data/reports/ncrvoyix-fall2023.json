@@ -1,0 +1,47 @@
+{
+    "id": "ncrvoyix-fall2023",
+    "company": "NCR Voyix",
+    "position": "Software Engineering Intern",
+    "workType": "co-op",
+    "location": "hybrid",
+    "term": "Fall 2023",
+    "date": "September 2023 - December 2023",
+    "thumbnail": "/ncrvoyix.png",
+    "technologies": ["Java", "Spring", "Kubernetes", "GCP", "Protocol Buffers"],
+    "sections": [
+    {
+        "title": "Introduction...",
+        "content": "I am a third-year Software Engineering student at the University of Guelph with a passion for software to solve challenging problems. I love working in teams, solving challenging problems, and learning new technologies. I am always happy to expand my knowledge.\n\n        A little about me... why software engineering?\n\n        In 2019, I was a member of the International Tournament of Young Mathematicians in Barcelona, Spain. Each team in the competition had to solve ten investigational problems and present them to the jury. This competition helped me gain experience working as a team leader in a team. At first, we struggled, but when we were at our last chance to make it to the finals, we all felt immense pressure. Our team then agreed to present my solution. I was nervous but knew it was essential to remain calm and focused. We rose to the challenge and won the silver medal.\n\n        I demonstrated leadership when it was most needed and helped my team succeed. Afterwards, I understood that math was not only about solving thousands of typical problems for competition. Still, it was also about searching for unknown answers, brainstorming solutions for unsolved problems, and bringing ideas to life. That was when I decided to become a software developer. I love to apply my mathematical and team skills to developing valuable software."
+    },
+    {
+        "title": "Where did I work...",
+        "content": "I worked at the NCR Voyix for the Fall 2023 semester. NCR Voyix is the world's leading enterprise provider of software, hardware and services for banks. The company's segments include Retail, Hospitality and Digital Banking. I work in the Digital Banking section of the company. We provide technology solutions to enhance online and mobile banking experiences for financial institutions, offering services such as online account management, mobile banking apps, bill payment, security features and so much more.\n\n    I am a Java Backend developer working in the Pre-Staged('Wintermute') team. I am working on the Channel Services Platform (CSP) Teller products. For the past 4 months, I have been working on a 'Collaboration' project. This is a new solution that encompasses collaboration between the customer and the bank teller and provides many features to the customer. My team has been working on the 'Reporting' side of the solution. We were tasked with building software to produce different kinds of reports based on the collected data. The reports were to be displayed on the UI application as well as downloaded in a CSV format. For this project, multiple teams were involved from countries such as Canada, United States, England and India."
+    },
+    {
+        "title": "What was I able to accomplish...",
+        "content": "At work, I was able to continuously improve my technical and communication skills. For the duration of the Fall semester, I focused on trying to use different technologies, apply them to solve problems and come up with creative solutions. I wanted to improve the quality of my code and be able to write my code efficiently. On the other side, I tried focusing on developing relationships with the senior staff of my team and engaging in design conversations and organization of team dynamics. \n\n    During my work time, I grew technically and delivered sprint objectives on time. I was always willing to help, transfer knowledge and contribute as much as a senior dev in the team. I actively participated in Scrum and design meetings. I contributed to the architecture design of the product as well as its implementation whilst focusing on high-quality code and meeting deadlines. I have taken challenging tasks involving talking to new people, trying new technologies and doing research. I have been able to improve my critical thinking skills by coming up with creative solutions and resolving any bugs. I was able to quickly analyze and solve problems whenever it was needed. \n\n    I wanted to work as a back-end developer because it is an in-demand position, and it exercises problem-solving skills. Also, this way I can contribute to the core functionality of the projects and understand their overall architecture. This position also promotes versatility in my career since I can understand and work on multiple technologies. I wanted to get development work in Java and Spring Boot as well as work with technologies such as Docker, Kubernetes, REST API, Protobuf and Pub/Sub. All of these technologies are used in enterprise development and the experience of working with them will help me in my future jobs. "
+    },
+    {
+        "title": "What did I work on...",
+        "content": "As was mentioned before, I worked on a project that involved creating a 'Reporting' service. Reporting service is used to produce different types of reports. Using it, based on the user-selected filter criteria, we can display data on the UI screen as well as download the full report in a CSV format. To build this application, our team had to work with Product Owners to get the requirements, design the solution and then implement it. The design used for the solution was new to NCR. To implement it our team had to work with people across different continents, North America, Asia and Europe. It is an amazing experience that allows me to develop cross-cultural communication skills and gain experience in multiple areas of the project.\n\n     As a developer, I was tasked with setting up repositories, building the skeleton of the microservice implementing the APIs and deploying and connecting microservices. The microservice is built using Spring Boot technology with the use of the strategy pattern and plugin architecture applied to enhance its flexibility and extensibility. During the last four months, I have been able to participate in meetings with clients, product owners and architects and contribute to the design and implementation of the project. I have immersed myself in Spring Boot (Spring MVC), PostgreSQL, Pub/Sub, Protobuf, Docker and Kubernetes technologies. One of the best parts of my job is talking to people at work and sharing ideas. I love the architecture side of the projects. The way services communicate and work with each other astonishes me. "
+    },
+    {
+        "title": "NCR Voyix Culture...",
+        "content": "As a part of NCR, I participated in multiple work events. Our team went for lunch and we had a wide office potluck event. At the NCR office, I was able to play table tennis, darts and foosball. I have really enjoyed the atmosphere and the wonderful community of people at NCR. My team in October went together to a bowling place and had food after. It was awesome to spend time together and enjoy each other's company in an outside-of-work environment. ",
+        "images": [
+        {
+            "src": "/NcrVoyixTeam.jpg",
+            "alt": "Bowling Team Event"
+        }
+        ]
+    },
+    {
+        "title": "To conclude...",
+        "content": "Working at NCR has been an absolutely tremendous experience. In the Fall of 2023, I worked on a new project that is now released to a SIT environment and will soon be in production. The project was built from scratch and the experience of building production-quality software from nothing is absolutely incredible. I was able to improve on my designing, coding and communication skills. I have been exposed to multiple modern technologies and gained an understanding of development, integration, and successful software delivery processes and was able to successfully contribute to these processes. "
+    },
+    {
+        "title": "Acknowledgments...",
+        "content": " I would like to acknowledge Clifford Matthew (Architect). He has provided an incredible learning experience for me. He has always encouraged me to think creatively and enhance my programming and social skills. I genuinely appreciate his efforts in helping me become a better software engineer. Working with him has been a rewarding experience both professionally and personally."
+    }
+    ]
+}
