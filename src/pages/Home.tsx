@@ -4,7 +4,7 @@ import COLORS from '../styles/colors';
 const Home: React.FC = () => {
   return (
     <div
-      className="relative min-h-screen pt-20 px-4 sm:px-6 md:px-8 flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen pt-20 md:pt-24 px-4 sm:px-6 md:px-8 flex items-center justify-center overflow-hidden"
       style={{
         backgroundColor: COLORS.bgFrom,
         backgroundImage: `
@@ -13,53 +13,92 @@ const Home: React.FC = () => {
         `,
       }}
     >
+      {/* Size never exceeds the smaller viewport side => no page scroll */}
       <div
-        className="relative aspect-square rounded-full flex flex-col items-center justify-center text-center"
+        className="relative"
         style={{
-          width: '70vmin', 
-          border: '1px solid rgba(34,197,94,0.20)',
+          width: 'min(96vmin, 92vw)',
+          aspectRatio: '1 / 1',
         }}
       >
-        {/* longitude lines */}
+        {/* Outer ring */}
         <div
-          className="absolute inset-0 rounded-full"
-          style={{ border: '1px solid rgba(34,197,94,0.10)', transform: 'rotate(45deg)' }}
-        />
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{ border: '1px solid rgba(34,197,94,0.10)', transform: 'rotate(-45deg)' }}
-        />
-        {/* latitude lines */}
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{ border: '1px solid rgba(34,197,94,0.10)', transform: 'scaleY(0.75)' }}
-        />
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{ border: '1px solid rgba(34,197,94,0.10)', transform: 'scaleY(0.50)' }}
+          className="pointer-events-none absolute inset-0 rounded-full"
+          style={{ border: '2px solid rgba(34,197,94,0.28)' }}
         />
 
-        {/* Text inside globe */}
-        <div className="relative z-10 px-4">
-          <h1
-            className="font-extrabold mb-4 tracking-tight"
+        {/* Clipped circle content */}
+        <div className="absolute inset-0 rounded-full overflow-hidden">
+          {/* Stronger, clearer arcs */}
+          <div
+            className="pointer-events-none absolute inset-0 rounded-full"
             style={{
-              color: COLORS.textPrimary,
-              fontSize: 'clamp(1.25rem, 4vmin, 3rem)',
-              lineHeight: 1.1,
+              border: '2px solid rgba(34,197,94,0.22)',
+              transform: 'rotate(45deg)',
+              boxShadow: 'inset 0 0 20px rgba(34,197,94,0.08)',
             }}
-          >
-            Interactive Globe Coming Soon
-          </h1>
-          <p
+          />
+          <div
+            className="pointer-events-none absolute inset-0 rounded-full"
             style={{
-              color: COLORS.textSecondary,
-              fontSize: 'clamp(0.875rem, 2vmin, 1.5rem)',
-              lineHeight: 1.5,
+              border: '2px solid rgba(34,197,94,0.22)',
+              transform: 'rotate(-45deg)',
+              boxShadow: 'inset 0 0 20px rgba(34,197,94,0.08)',
             }}
-          >
-            Get ready to explore my journey through an interactive 3D globe experience
-          </p>
+          />
+          <div
+            className="pointer-events-none absolute inset-0 rounded-full"
+            style={{
+              border: '2px solid rgba(34,197,94,0.18)',
+              transform: 'scaleY(0.75)',
+              boxShadow: 'inset 0 0 18px rgba(34,197,94,0.06)',
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-0 rounded-full"
+            style={{
+              border: '2px solid rgba(34,197,94,0.18)',
+              transform: 'scaleY(0.50)',
+              boxShadow: 'inset 0 0 18px rgba(34,197,94,0.06)',
+            }}
+          />
+
+          {/* Content centered inside circle with safe padding */}
+          <div className="relative z-10 w-full h-full flex items-center justify-center">
+            <div
+              className="text-center"
+              style={{
+                width: '72%',
+                paddingInline: '6%',
+                margin: '0 auto',
+                overflowWrap: 'anywhere',
+                wordBreak: 'break-word',
+                hyphens: 'auto',
+              }}
+            >
+              <h1
+                className="font-extrabold tracking-tight mb-3"
+                style={{
+                  color: COLORS.textPrimary,
+                  fontSize: 'clamp(1rem, 5.4vw, 2.4rem)',
+                  lineHeight: 1.15,
+                }}
+              >
+                Interactive Globe Coming Soon
+              </h1>
+              <p
+                className="mx-auto"
+                style={{
+                  color: COLORS.textSecondary,
+                  fontSize: 'clamp(0.9rem, 3.6vw, 1.3rem)',
+                  lineHeight: 1.5,
+                  maxWidth: '42ch',
+                }}
+              >
+                Get ready to explore my journey through an interactive 3D globe experience
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,98 +1,182 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { reports } from '../data/reports';
 import { motion } from 'framer-motion';
-// import type { WorkTermReport } from '../types/report';
+import { reports } from '../data/reports';
+import COLORS from '../styles/colors';
 
 const ReportPage: React.FC = () => {
   const { reportName } = useParams<{ reportName: string }>();
-  const report = reports.find(r => r.id === reportName);
+  const report = reports.find((r) => r.id === reportName);
 
+  // Not found
   if (!report) {
     return (
-      <div className="min-h-screen pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6 md:px-8 pb-12 sm:pb-16 md:pb-20">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Report Not Found</h1>
-            <p className="text-gray-300 mb-8">The report you're looking for doesn't exist.</p>
-            <Link to="/reports" className="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors">
-              Back to Reports
-            </Link>
-          </div>
+      <div
+        className="min-h-screen pt-20 md:pt-24 pb-20 px-4 sm:px-6 md:px-8"
+        style={{
+          backgroundImage: `
+            radial-gradient(900px 420px at 80% 92%, rgba(245,158,11,0.06), transparent 60%),
+            linear-gradient(135deg, ${COLORS.bgFrom}, ${COLORS.bgVia}, ${COLORS.bgTo})
+          `,
+        }}
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h1
+            className="font-extrabold mb-3 tracking-tight"
+            style={{ color: COLORS.textPrimary, fontSize: 'clamp(1.75rem, 4vw, 2.5rem)' }}
+          >
+            Report Not Found
+          </h1>
+          <p className="mb-8" style={{ color: COLORS.textSecondary }}>
+            The report you're looking for doesn't exist.
+          </p>
+          <Link
+            to="/reports"
+            className="inline-block rounded-xl px-5 py-3 border transition-colors"
+            style={{
+              color: COLORS.textPrimary,
+              borderColor: COLORS.surfaceBorderGreen,
+              backgroundColor: 'transparent',
+            }}
+          >
+            ← Back to Reports
+          </Link>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6 md:px-8 pb-12 sm:pb-16 md:pb-20">
-      <div className="max-w-4xl mx-auto">
-        <Link to="/reports" className="inline-block mb-8 text-gray-300 hover:text-white transition-colors">
+    <div
+      className="min-h-screen pt-20 md:pt-24 pb-20 px-4 sm:px-6 md:px-8"
+      style={{
+        backgroundImage: `
+          radial-gradient(900px 420px at 80% 92%, rgba(245,158,11,0.06), transparent 60%),
+          linear-gradient(135deg, ${COLORS.bgFrom}, ${COLORS.bgVia}, ${COLORS.bgTo})
+        `,
+      }}
+    >
+      <div className="max-w-5xl mx-auto">
+        {/* Back link */}
+        <Link
+          to="/reports"
+          className="inline-block mb-8 rounded-lg px-3 py-1 transition-colors"
+          style={{ color: COLORS.textPrimary }}
+        >
           ← Back to Reports
         </Link>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-white/1 backdrop-blur-lg rounded-xl overflow-hidden border border-white/20 shadow-xl shadow-black/20"
+          transition={{ duration: 0.45 }}
+          className="rounded-2xl overflow-hidden border"
+          style={{
+            backgroundColor: COLORS.surface,
+            borderColor: COLORS.surfaceBorderGreen,
+            boxShadow: `
+              0 12px 36px rgba(0,0,0,0.40),
+              0 0 0 1px rgba(34,197,94,0.18),
+              0 10px 26px rgba(245,158,11,0.14)
+            `,
+          }}
         >
-          <div className="p-8 sm:p-10">
-            <div className="flex items-center justify-between mb-6">
+          <div className="p-6 sm:p-8 md:p-10">
+            {/* Header row */}
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
               <div>
-                <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">{report.company}</h1>
-                <h2 className="text-xl sm:text-2xl text-gray-200 mb-4">{report.position}</h2>
-                <div className="flex flex-col gap-2 mb-6">
-                  <span className="text-yellow-500 font-semibold text-lg">{report.term}</span>
-                  <span className="text-gray-300 text-lg">{report.date}</span>
+                <h1
+                  className="font-extrabold tracking-tight mb-2"
+                  style={{ color: COLORS.textPrimary, fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', lineHeight: 1.1 }}
+                >
+                  {report.company}
+                </h1>
+                <h2
+                  className="mb-4"
+                  style={{ color: COLORS.textSecondary, fontSize: 'clamp(1.125rem, 2.2vw, 1.375rem)' }}
+                >
+                  {report.position}
+                </h2>
+
+                <div className="flex flex-col gap-1.5">
+                  <span
+                    className="font-semibold"
+                    style={{ color: '#FFE1A6', fontSize: 'clamp(1rem, 1.8vw, 1.1rem)' }} // amber for term
+                  >
+                    {report.term}
+                  </span>
+                  <span style={{ color: COLORS.textSecondary, fontSize: 'clamp(0.95rem, 1.6vw, 1.05rem)' }}>
+                    {report.date}
+                  </span>
                 </div>
               </div>
-              <div className="flex flex-col items-end gap-3">
-                <span className="px-4 py-2 bg-yellow-500/20 border border-yellow-500/30 text-yellow-300 rounded-lg text-sm font-medium capitalize">
+
+              {/* Badges (distinct colors) */}
+              <div className="flex md:flex-col gap-3">
+                {/* Work Type → Indigo */}
+                <span
+                  className="px-4 py-2 border rounded-lg text-sm font-medium capitalize text-center"
+                  style={{
+                    backgroundColor: 'rgba(139,92,246,0.16)',
+                    borderColor: 'rgba(139,92,246,0.30)',
+                    color: '#DADAFD',
+                  }}
+                >
                   {report.workType}
                 </span>
-                <span className="px-4 py-2 bg-blue-500/20 border border-blue-500/30 text-blue-300 rounded-lg text-sm font-medium capitalize">
+                {/* Location → Cyan */}
+                <span
+                  className="px-4 py-2 border rounded-lg text-sm font-medium capitalize text-center"
+                  style={{
+                    backgroundColor: 'rgba(6,182,212,0.16)',
+                    borderColor: 'rgba(6,182,212,0.30)',
+                    color: '#B9F4FF',
+                  }}
+                >
                   {report.location}
                 </span>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3 mb-8">
-              {report.technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 bg-white/15 hover:bg-white/20 transition-colors rounded-lg text-sm font-medium text-gray-100"
-                >
-                  {tech}
-                </span>
-              ))}
+            {/* Divider + accent bar */}
+            <div className="mb-8">
+              <div
+                className="h-1 w-24 rounded-full"
+                style={{ backgroundImage: `linear-gradient(90deg, ${COLORS.orange}, ${COLORS.primary})` }}
+              />
             </div>
 
-            <div className="prose prose-invert max-w-none space-y-8">
-              {report.sections.map((section, index) => (
-                <section key={index}>
-                  <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
-                  <div className="text-gray-300 leading-relaxed whitespace-pre-line">
+            {/* Sections */}
+            <div className="space-y-10">
+              {report.sections.map((section, idx) => (
+                <section key={idx}>
+                  <h3
+                    className="font-extrabold tracking-tight mb-3"
+                    style={{ color: COLORS.textPrimary, fontSize: 'clamp(1.25rem, 2.4vw, 1.6rem)', lineHeight: 1.15 }}
+                  >
+                    {section.title}
+                  </h3>
+                  <div
+                    className="whitespace-pre-line leading-relaxed"
+                    style={{ color: COLORS.textPrimary, fontSize: 'clamp(1rem, 1.6vw, 1.05rem)' }}
+                  >
                     {section.content}
                   </div>
-                  {section.images && section.images.length > 0 && (
-                    <div className="mt-6 space-y-4">
+
+                  {section.images?.length ? (
+                    <div className="mt-6 grid sm:grid-cols-2 gap-4">
                       {section.images.map((image, imgIndex) => (
-                        <figure key={imgIndex} className="my-6 flex flex-col items-center">
-                          <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="rounded-lg w-1/2 h-auto"
-                          />
+                        <figure key={imgIndex} className="rounded-xl overflow-hidden border" style={{ borderColor: COLORS.surfaceBorderGreen }}>
+                          <img src={image.src} alt={image.alt} className="w-full h-auto block object-cover" />
                           {image.caption && (
-                            <figcaption className="text-center text-gray-400 mt-2">
+                            <figcaption className="px-3 py-2 text-center" style={{ color: COLORS.textSecondary }}>
                               {image.caption}
                             </figcaption>
                           )}
                         </figure>
                       ))}
                     </div>
-                  )}
+                  ) : null}
                 </section>
               ))}
             </div>
@@ -103,4 +187,4 @@ const ReportPage: React.FC = () => {
   );
 };
 
-export default ReportPage; 
+export default ReportPage;

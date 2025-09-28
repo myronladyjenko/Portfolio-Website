@@ -1,74 +1,130 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { reports } from '../data/reports';
 import { motion } from 'framer-motion';
+import { reports } from '../data/reports';
 import COLORS from '../styles/colors';
+
+type RGB = { bg: string; border: string; text: string };
+
+// Simple keyword-based palette for technology chips
+const techColor = (t: string): RGB => {
+  const x = t.toLowerCase();
+
+  // Languages
+  if (/(java|spring|sql|c|python|javascript|go)\b/.test(x))
+    return { bg: 'rgba(34,197,94,0.18)', border: 'rgba(34,197,94,0.32)', text: '#BFEFCB' }; // green
+
+  // Tools
+  if (/(docker|kubernetes|jenkins|gardener|postgres|mysql|cassandra|redis|kafka|aws|gcp|oracle db)\b/.test(x))
+    return { bg: 'rgba(245,158,11,0.18)', border: 'rgba(245,158,11,0.32)', text: '#FFE1A6' }; // amber
+
+  // Frameworks
+  if (/(spring boot|nodejs|flask|guice|pytorch|next|junit)\b/.test(x))
+    return { bg: 'rgba(59,130,246,0.18)', border: 'rgba(59,130,246,0.32)', text: '#CFE2FF' }; // blue
+
+  // Default
+  return { bg: 'rgba(148,163,184,0.16)', border: 'rgba(148,163,184,0.28)', text: '#E5EEF6' }; // slate
+};
 
 const Reports: React.FC = () => {
   return (
-    <div className="min-h-screen pt-20 sm:pt-24 md:pt-28 px-4 sm:px-6 md:px-8 pb-12 sm:pb-16 md:pb-20" style={{ background: `linear-gradient(180deg, ${COLORS.bgVia}, ${COLORS.bgTo})` }}>
+    <div
+      className="min-h-screen pt-20 md:pt-24 pb-20 px-4 sm:px-6 md:px-8"
+      style={{
+        backgroundImage: `
+          radial-gradient(900px 420px at 80% 92%, rgba(245,158,11,0.06), transparent 60%),
+          linear-gradient(135deg, ${COLORS.bgFrom}, ${COLORS.bgVia}, ${COLORS.bgTo})
+        `,
+      }}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {reports.map((report) => (
             <motion.div
               key={report.id}
-              whileHover={{ scale: 1.02 }}
-              className="rounded-xl overflow-hidden border shadow-xl"
+              whileHover={{ y: -4, scale: 1.01 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 24 }}
+              className="rounded-2xl overflow-hidden border"
               style={{
-                background: report.id === 'coming-soon' ? `linear-gradient(180deg, rgba(139,92,246,0.06), rgba(59,130,246,0.04))` : 'rgba(255,255,255,0.03)',
-                borderColor: report.id === 'coming-soon' ? 'rgba(139,92,246,0.12)' : 'rgba(255,255,255,0.06)',
-                boxShadow: '0 8px 30px rgba(0,0,0,0.35)'
+                backgroundColor: COLORS.surface,
+                borderColor: COLORS.surfaceBorderGreen,
+                boxShadow: `
+                  0 12px 36px rgba(0,0,0,0.40),
+                  0 0 0 1px rgba(34,197,94,0.18),
+                  0 10px 26px rgba(245,158,11,0.14)
+                `,
               }}
             >
-              <Link to={report.id === 'coming-soon' ? '#' : `/reports/${report.id}`} className="block">
-                <div className="h-[200px] relative">
-                  {report.id === 'coming-soon' ? (
-                    <div className="w-full h-full flex items-center justify-center" style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.06), rgba(59,130,246,0.05))' }}>
-                      <div className="text-center">
-                        <h3 className="text-2xl font-bold text-white mb-2">More Experience</h3>
-                        <p className="text-gray-300">Coming Soon!</p>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center p-4">
-                      <img
-                        src={report.thumbnail}
-                        alt={`${report.company} work term`}
-                        className="max-w-full max-h-full object-contain"
-                      />
-                    </div>
-                  )}
+              <Link to={`/reports/${report.id}`} className="block cursor-pointer">
+                {/* Top visual */}
+                <div
+                  className="h-[200px] relative flex items-center justify-center"
+                  style={{
+                    background: `linear-gradient(135deg, rgba(34,197,94,0.06), rgba(245,158,11,0.06))`,
+                    borderBottom: `1px solid ${COLORS.surfaceBorderGreen}`,
+                  }}
+                >
+                  <img
+                    src={report.thumbnail}
+                    alt={`${report.company} work term`}
+                    className="max-w-[70%] max-h-[70%] object-contain"
+                    style={{ filter: 'saturate(1.02)' }}
+                  />
                 </div>
-                
-                <div className="p-6 sm:p-8">
+
+                {/* Body */}
+                <div className="p-6 sm:p-7">
                   <div className="flex items-center justify-between mb-3">
-                    <span className={`${report.id === 'coming-soon' ? 'text-purple-300' : 'text-orange-300'} font-semibold text-lg`}>
+                    <span
+                      className="font-semibold text-lg"
+                      style={{ color: '#FFE1A6' }}
+                    >
                       {report.term}
                     </span>
-                    <span className="text-gray-300 text-sm">{report.date}</span>
-                  </div>
-                  
-                  <h2 className="text-2xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>{report.company}</h2>
-                  <h3 className="text-lg mb-4" style={{ color: 'var(--text-secondary)' }}>{report.position}</h3>
-                  
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className={`px-4 py-1.5 ${report.id === 'coming-soon' ? 'bg-purple-500/20 border-purple-500/30 text-purple-300' : 'bg-yellow-500/20 border-yellow-500/30 text-yellow-300'} border rounded-lg text-sm font-medium capitalize`}>
-                      {report.workType}
-                    </span>
-                    <span className={`px-4 py-1.5 ${report.id === 'coming-soon' ? 'bg-blue-500/20 border-blue-500/30 text-blue-300' : 'bg-blue-500/20 border-blue-500/30 text-blue-300'} border rounded-lg text-sm font-medium capitalize`}>
-                      {report.location}
+                    <span className="text-sm" style={{ color: COLORS.textSecondary }}>
+                      {report.date}
                     </span>
                   </div>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {report.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1.5 bg-white/15 rounded-full text-sm font-medium text-gray-100"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+
+                  <h2
+                    className="font-extrabold mb-1 tracking-tight"
+                    style={{
+                      color: COLORS.textPrimary,
+                      fontSize: 'clamp(1.25rem, 2.2vw, 1.6rem)',
+                      lineHeight: 1.15,
+                    }}
+                  >
+                    {report.company}
+                  </h2>
+                  <h3
+                    className="mb-4"
+                    style={{
+                      color: COLORS.textSecondary,
+                      fontSize: 'clamp(0.95rem, 1.8vw, 1.05rem)',
+                    }}
+                  >
+                    {report.position}
+                  </h3>
+
+                  {/* Tech chips */}
+                  <div className="flex flex-wrap gap-2 mt-6">
+                    {report.technologies.map((tech) => {
+                      const c = techColor(tech);
+                      return (
+                        <span
+                          key={tech}
+                          className="px-3 py-1.5 rounded-full text-sm font-semibold border"
+                          style={{
+                            backgroundColor: c.bg,
+                            borderColor: c.border,
+                            color: c.text,
+                            letterSpacing: '0.2px',
+                          }}
+                        >
+                          {tech}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               </Link>
@@ -80,4 +136,4 @@ const Reports: React.FC = () => {
   );
 };
 
-export default Reports; 
+export default Reports;

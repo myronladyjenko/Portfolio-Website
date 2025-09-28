@@ -77,7 +77,7 @@ const About: React.FC = () => {
                 Afterwards, I understood that math was not only about solving thousands of typical
                 problems for competition. It was about searching for unknown answers, brainstorming
                 solutions for unsolved problems, and bringing your ideas to life. That was when I
-                decided to become a software developer. I would love to apply my mathematical
+                decided to become a software engineer. I would love to apply my mathematical
                 background and team skills to developing valuable software.
               </p>
             </div>
@@ -96,7 +96,7 @@ const About: React.FC = () => {
                 lineHeight: 1.1,
               }}
             >
-              About Me &amp; How I Work
+              Who am I today?
             </h2>
 
             <div
