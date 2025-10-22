@@ -75,7 +75,7 @@ const LandingCardVariantMerged: React.FC<LandingCardProps> = ({ onClose }) => {
                   // color: COLORS.textPrimary
                 }}
               >
-                Backend Developer
+                Backend Engineer
               </span>
             </h1>
 
